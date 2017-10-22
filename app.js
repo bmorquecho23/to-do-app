@@ -20,8 +20,16 @@ function onReady(){
     toDoList.appendChild(newLi);
     //empty the input
     newToDoText.value='';
-
+    //create delete button
+    let deleteButton = document.createElement('button');
+    deleteButton.innerText ='delete';
+    //attach delete button to Li
+    newLi.appendChild(deleteButton);
+    deleteButton.addEventListener('click', event =>{
+      toDoList.removeChild(newLi);
+    })
   });
+
 
 }
 window.onload = function(){
